@@ -7,8 +7,8 @@ price = list(map(int, input().split()))
 
 now = 0
 result = 0
+
 while now < n:
-    tmp = 0
     for i in range(now, n):
         if price[i] >= price[now]:
             if i < n-1:
@@ -18,7 +18,7 @@ while now < n:
                 now = i+1
                 break
         elif i < n-1:
-            result += price[i]*sum(roads[now:i+1])
+            result += price[now]*sum(roads[now:i])
             now = i
             break
         else:
