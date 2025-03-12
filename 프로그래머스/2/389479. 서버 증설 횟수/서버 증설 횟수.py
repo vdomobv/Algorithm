@@ -16,5 +16,7 @@ def solution(players, m, k):
                 for j in range(i, i+k):
                     if j < 24:
                         lst[j] += plus
+                    else:
+                        break
         
     return answer
